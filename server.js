@@ -20,7 +20,12 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 
 app.get('/', (req,res) => {
     const title = 'Home';
-    res.render(createPath('index'), {title});
+    const tasks = [
+        { name: 'Tasg1', type: 'work', desc: 'taskkk', status: false },
+        { name: 'Tasf2', type: 'learning', desc: 'taskk2', status: false },
+        { name: 'Tasf3', type: 'learning', desc: 'taskksdlcsdcoihos oweeidhweoidh oiwei djsdksj ksjdddfrffdffrffedhjishhuish uihuig iugiusgoiusfh idhwoieh weoiidh oiwedh diwhe oihewo ih o2', status: true }
+    ];
+    res.render(createPath('index'), {title, tasks});
 });
 
 app.get('/edit', (req,res) => {

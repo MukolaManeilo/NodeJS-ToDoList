@@ -4,7 +4,37 @@
 <body>
     <%- include('./partials/nav.ejs') %>
     <menu>
-        Create
+        <div class="create-box-container">
+            <div class="create-box">
+                <div class="create-box-title">
+                    Title
+                </div>
+                <div class="create-box-title-input">
+                    <input class="create-box-input" type="text">
+                </div>
+                <div class="create-box-box-type">
+                    Type
+                </div>
+                <div class="create-box-box-type-input">
+                    <select id="options" class="create-box-input">
+                        <option value="Work">Work</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Home Work">Home Work</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="create-box-desc">
+                    Description
+                </div>
+                <div class="create-box-desc-input">
+                    <input class="create-box-input" type="text">
+                </div>
+                <div class="create-box-button-container">
+                    <button id="create-box-button-cancel">Cancel</button>
+                    <button id="create-box-button-submit">Submit</button>
+                </div>
+            </div>
+        </div>
     </menu>
 </body>
 </html>
