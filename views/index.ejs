@@ -5,36 +5,45 @@
     <%- include('./partials/nav.ejs') %>
     <menu>
         <div class="tasks">
-            <button class="button-create">
-                Create
-            </button>
+            <a href="/task/create">
+                <button class="button-create">
+                    Create
+                </button>
+            </a>
             <% if (tasks.length) { %>
                 <% tasks.forEach(function(task) { %>
                     <div class="task">
                         <div class="task-top-side">
                             <div class="task-name">
-                                <%= task.name %>
+                                <%= task.title %>
                             </div>
                             
                             <div class="task-panel">
                                 <div class="task-type">
                                     <%= task.type %>
                                 </div>
-                                <button class="buttom-edit-task">
-                                    edit
-                                </button>
-                                <button class="button-delete-task">
-                                    delete
-                                </button>
-                                <% if(task.status){ %>
-                                    <button class="button-task-status button-task-status-true">
+                                <a href="/task/edit/<%= task.id %>">
+                                    <button class="buttom-edit-task">
+                                        Edit
                                     </button>
-                                <% }else{ %>
-                                    <button class="button-task-status button-task-status-false">
+                                </a>
+                                <a href="/task/delete/<%= task.id %>">
+                                    <button class="button-delete-task">
+                                        Delete
                                     </button>
-                                <% } %>
+                                </a>
+                                <a href="/task/changestatus/<%= task.id %>">
+                                    <% if(task.status){ %>
+                                        <button class="button-task-status button-task-status-true">
+                                        </button>
+                                    <% }else{ %>
+                                        <button class="button-task-status button-task-status-false">
+                                        </button>
+                                    <% } %>
+                                </a>
                             </div>
                         </div>
+                        <hr>
                         <div class="task-button-side">
                             <div class="task-desc">
                                 <%= task.desc %>

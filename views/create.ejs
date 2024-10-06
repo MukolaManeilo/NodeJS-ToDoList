@@ -6,33 +6,37 @@
     <menu>
         <div class="create-box-container">
             <div class="create-box">
-                <div class="create-box-title">
-                    Title
-                </div>
-                <div class="create-box-title-input">
-                    <input class="create-box-input" type="text">
-                </div>
-                <div class="create-box-box-type">
-                    Type
-                </div>
-                <div class="create-box-box-type-input">
-                    <select id="options" class="create-box-input">
-                        <option value="Work">Work</option>
-                        <option value="Learning">Learning</option>
-                        <option value="Home Work">Home Work</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="create-box-desc">
-                    Description
-                </div>
-                <div class="create-box-desc-input">
-                    <input class="create-box-input" type="text">
-                </div>
-                <div class="create-box-button-container">
-                    <button id="create-box-button-cancel">Cancel</button>
-                    <button id="create-box-button-submit">Submit</button>
-                </div>
+                <form id="new-task" action="/task/create" method="post">
+                    <div class="create-box-title">
+                        Title
+                    </div>
+                    <div class="create-box-title-input">
+                        <input name="title" class="create-box-input" type="text">
+                    </div>
+                    <div class="create-box-box-type">
+                        Type
+                    </div>
+                    <div class="create-box-box-type-input">
+                        <select id="type" name="type" class="create-box-input">
+                            <option value="Work">Work</option>
+                            <option value="Learning">Learning</option>
+                            <option value="Home Work">Home Work</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="create-box-desc">
+                        Description
+                    </div>
+                    <div class="create-box-desc-input">
+                        <input name="desc" class="create-box-input" type="text">
+                    </div>
+                    <div class="create-box-button-container">
+                        <a href="/">
+                            <button id="create-box-button-cancel" type="button">Cancel</button>
+                        </a>
+                        <button id="create-box-button-submit" type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </menu>

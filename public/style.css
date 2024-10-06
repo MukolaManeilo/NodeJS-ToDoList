@@ -5,6 +5,14 @@ body {
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
+hr {
+    width: 95%;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent 0%, #f0f0f0 10%, #f0f0f0 90%, transparent 100%);
+    border-style: none;
+    margin: 0px auto;
+}
+
 .header {
     display: flex;
     background-color: white;
@@ -72,7 +80,7 @@ button:hover {
 
 .task {
     width: 700px;
-    height: 125px;
+    height: 135px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
@@ -80,7 +88,7 @@ button:hover {
 }
 
 .task-top-side {
-    padding: 10px;
+    padding: 10px 12px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -99,6 +107,7 @@ button:hover {
 .task-panel > * {
     margin: 0px 5px;
 }
+
 .task-panel > button {
     padding: 0px 10px;
     height: 35px;
@@ -110,7 +119,7 @@ button:hover {
 }
 
 .task-name {
-    margin-left: 10px;
+    margin-left: 12px;
     font-size: 24px;
 }
 
@@ -137,7 +146,17 @@ button:hover {
 
 .task-desc {
     font-size: 16px;
-    margin: 0px 10px;
+    margin: 0px 14px;
+}
+
+.button-delete-task {
+    padding: 0px 10px;
+    height: 33.4px;
+}
+
+.buttom-edit-task {
+    padding: 0px 10px;
+    height: 33.4px;
 }
 
 .button-task-status {
@@ -145,7 +164,7 @@ button:hover {
     padding: 0px;
     width: 33.4px;
     height: 33.4px;
-    border-radius: 33.4px;
+    /* border-radius: 33.4px; */
 }
 
 .button-task-status-true {
@@ -170,7 +189,7 @@ button:hover {
 
 .create-box {
     width: 400px;
-    height: 195px;
+    height: 218px;
     padding: 10px 12px;
     background-color: white;
     border-radius: 5px;
@@ -182,7 +201,7 @@ button:hover {
 
 .create-box-input {
     width: 400px;
-    height: 20px;
+    height: 28px;
     padding: 1px 2px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -195,6 +214,7 @@ button:hover {
 
 .create-box-desc, .create-box-box-type {
     margin-top: 10px;
+    margin-bottom: 2px;
 }
 
 .create-box-button-container {
@@ -206,7 +226,7 @@ button:hover {
 
 #create-box-button-cancel,  #create-box-button-submit {
     width: 190px;
-    height: 23px;
+    height: 28px;
     margin-top: 5px;
 }
 
