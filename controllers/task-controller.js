@@ -2,6 +2,7 @@ const Task = require('../models/task');
 const createPath = require('../helpers/create-path');
 
 const getTask = (req, res) => {
+    console.log("Цей код виконується при завантаженні файлу");
     const pageTitle = 'Home';
 
     Task.find()

@@ -1,6 +1,8 @@
 const express = require('express');
 const Task = require('../models/task');
 const createPath = require('../helpers/create-path');
+
+const ensureAuthenticated = require('../middleware/auth-middleware');
 const router = express.Router();
 const { getTask, getCreateTask, postCreateTask, getEditTask, postEditTask, ChangTaskStatus, deleteTask } 
 = require('../controllers/task-controller');
@@ -8,16 +10,16 @@ const { getTask, getCreateTask, postCreateTask, getEditTask, postEditTask, Chang
 
 
 
-router.get('/', getTask);
+router.get('/',ensureAuthenticated, getTask);
 
-router.get('/task/create', getCreateTask);
-router.post('/task/create', postCreateTask);
+router.get('/task/create', ensureAuthenticated, getCreateTask);
+router.post('/task/create', ensureAuthenticated, postCreateTask);
 
-router.get('/task/edit/:id', getEditTask);
-router.post('/task/edit/:id', postEditTask);
+router.get('/task/edit/:id', ensureAuthenticated, getEditTask);
+router.post('/task/edit/:id', ensureAuthenticated, postEditTask);
 
-router.get('/task/changestatus/:id', ChangTaskStatus);
+router.get('/task/changestatus/:id', ensureAuthenticated, ChangTaskStatus);
 
-router.get('/task/delete/:id', deleteTask);
+router.get('/task/delete/:id', ensureAuthenticated, deleteTask);
 
 module.exports = router;
